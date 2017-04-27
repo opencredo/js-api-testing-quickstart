@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*babel.*
+.*/node_modules/.*/test/.*
+.*/node_modules/flow-copy-source/.*
+
+[include]
+
+[libs]
+declarations
+
+[options]
+esproposal.class_static_fields=enable
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=shared

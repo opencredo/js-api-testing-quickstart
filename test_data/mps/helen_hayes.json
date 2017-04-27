@@ -1,0 +1,31 @@
+{
+    "member_id": "40834",
+    "house": "1",
+    "constituency": "Dulwich and West Norwood",
+    "party": "Labour",
+    "entered_house": "2015-05-08",
+    "left_house": "9999-12-31",
+    "entered_reason": "general_election",
+    "left_reason": "still_in_office",
+    "person_id": "25310",
+    "lastupdate": "2015-05-08 03:42:04",
+    "title": "",
+    "given_name": "Helen",
+    "family_name": "Hayes",
+    "full_name": "Helen Hayes",
+    "url": "/mp/25310/helen_hayes/dulwich_and_west_norwood",
+    "image": "/images/mpsL/25310.jpeg",
+    "image_height": 118,
+    "image_width": 89,
+    "office": [
+        {
+            "moffice_id": "uk.parliament.data/Member/4510/Committee/17",
+            "dept": "Communities and Local Government Committee",
+            "position": "Member",
+            "from_date": "2015-07-13",
+            "to_date": "9999-12-31",
+            "person": "25310",
+            "source": ""
+        }
+    ]
+}

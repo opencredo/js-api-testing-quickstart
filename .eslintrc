@@ -1,0 +1,30 @@
+parser: babel-eslint
+extends: airbnb/base
+env:
+  node: true
+globals:
+  describe: true
+  beforeEach: true
+  before: true
+  afterEach: true
+  after: true
+  it: true
+  logger: true
+plugins:
+  - babel
+  - import
+rules:
+  max-len:
+    - warn
+    - 150
+  prefer-arrow-callback: off
+  indent:
+    - error
+    - 4
+  comma-dangle:
+    - error
+    - never
+  no-duplicate-imports: off
+  require-yield: off
+  generator-star-spacing: off
+  babel/generator-star-spacing: error
