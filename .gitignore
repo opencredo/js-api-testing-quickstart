@@ -1,8 +1,4 @@
 *.iml
 .idea
-*.sublime-workspace
-*.sublime-project
-.project
-.DS_Store
 node_modules
-lib
+bin/

@@ -4,6 +4,37 @@ import Axios from 'axios';
 import getApiKey from './api_key';
 import type { MP } from '../objects/mp';
 
+export type MpQuery = {
+    date: string;
+    party: string;
+    search: string;
+}
+
+export function MpQueryBuilder() {
+
+    let query = {};
+
+    this.date = function (date: string) {
+        query.date = date;
+        return this;
+    };
+
+    this.party = function (party: string) {
+        query.party = party;
+        return this;
+
+    };
+
+    this.search = function (search: string) {
+        query.search = search;
+        return this;
+
+    };
+
+    this.build = function() {
+        return query;
+    };
+}
 
 export default class ListMpService {
     axios: Axios;
@@ -16,8 +47,8 @@ export default class ListMpService {
         });
     }
 
-    async listMPs(party: string, date?: string = '', search?: string = ''): Promise<MP[]> {
-        const response = await this.axios.get(`/getMPs?date=${date}&party=${party}&search=${search}&key=${this.apiKey}`);
+    async listMPs(query: MpQuery): Promise<MP[]> {
+        const response = await this.axios.get(`/getMPs?date=${query.date}&party=${query.party}&search=${query.search}&key=${this.apiKey}`);
         return response.data;
     }
 

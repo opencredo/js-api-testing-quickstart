@@ -1,11 +1,9 @@
 /* @flow */
-import { describe, it, before, after, afterEach } from 'mocha';
+import { describe, it, before } from 'mocha';
 import chai, { expect } from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import chaiSubset from 'chai-subset';
-import shortId from 'shortid';
-import casual from 'casual';
-import ListMPsService from '../../src/list_mps_service';
+import ListMPsService, { MpQueryBuilder } from '../../src/api/list_mps_service';
 import type { MP } from '../../src/objects/mp';
 import testMp from '../../test_data/mps/helen_hayes_short.json';
 
@@ -34,11 +32,10 @@ describe('List all MPs endpoint', function () {
     });
 
     describe('Filtering by party', function () {
-        this.timeout(500);
         let labourMPs: MP[];
 
         before(async () => {
-            labourMPs = await mpApi.listMPs('Labour');
+            labourMPs = await mpApi.listMPs(new MpQueryBuilder().party("Labour").build());
         });
 
         it('gets a list of Labour MPs of the correct length', async () => {
