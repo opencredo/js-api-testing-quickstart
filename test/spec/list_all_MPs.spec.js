@@ -1,12 +1,12 @@
 /* @flow */
-import {before, describe, it} from "mocha";
-import chai, {expect} from "chai";
-import chaiAsPromised from "chai-as-promised";
-import chaiSubset from "chai-subset";
-import type {MpQuery} from "../src/api/list_mps_service";
-import ListMPsService from "../src/api/list_mps_service";
-import type {MP} from "../src/objects/mp";
-import testMp from "../data/mps/helen_hayes_short.json";
+import { before, describe, it } from 'mocha';
+import chai, { expect } from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+import chaiSubset from 'chai-subset';
+import type { MpQuery } from '../src/api/list_mps_service';
+import ListMPsService from '../src/api/list_mps_service';
+import type { MP } from '../src/objects/mp';
+import testMp from '../data/mps/helen_hayes_short.json';
 
 chai.use(chaiAsPromised);
 chai.use(chaiSubset);
@@ -14,7 +14,7 @@ chai.use(chaiSubset);
 let mpApi: ListMPsService;
 
 
-describe('List all MPs endpoint', function () {
+describe('List all MPs endpoint', function listAllMPsTest() {
     this.timeout(2000);
 
     let allMPs: MP[];
@@ -33,11 +33,11 @@ describe('List all MPs endpoint', function () {
         expect(allMPs.map(mp => mp.name)).to.contain(testMp.name);
     });
 
-    describe('Filtering by party', function () {
+    describe('Filtering by party', function filterMPsTest() {
         let labourMPs: MP[];
 
         before(async () => {
-            const query = (definition) => ({party: "Labour"}: MpQuery);
+            const query = ({ party: 'Labour' }: MpQuery);
             labourMPs = await mpApi.listMPs(query);
         });
 
