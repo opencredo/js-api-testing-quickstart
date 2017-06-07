@@ -20,7 +20,7 @@
     "uuid": "3.0.1",
     "underscore.deep": "^0.5.1",
     "casual": "1.5.8",
-    "axios": "~0.15.3"
+    "axios": "0.15.3"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",

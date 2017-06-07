@@ -29,6 +29,7 @@ describe('List all MPs endpoint', function () {
     });
 
     it('gets a list containing a specific MP', async () => {
+        expect(allMPs).to.have.lengthOf.at.least(1);
         expect(allMPs.map(mp => mp.name)).to.contain(testMp.name);
     });
 
