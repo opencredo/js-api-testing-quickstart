@@ -10,32 +10,6 @@ export type MpQuery = {
     search: string;
 }
 
-export function MpQueryBuilder() {
-
-    let query = {};
-
-    this.date = function (date: string) {
-        query.date = date;
-        return this;
-    };
-
-    this.party = function (party: string) {
-        query.party = party;
-        return this;
-
-    };
-
-    this.search = function (search: string) {
-        query.search = search;
-        return this;
-
-    };
-
-    this.build = function() {
-        return query;
-    };
-}
-
 export default class ListMpService {
     axios: Axios;
     apiKey: string;

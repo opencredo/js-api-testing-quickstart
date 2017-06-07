@@ -15,8 +15,8 @@ An example test framework to get started with API testing using Javascript. Uses
 - Get an API key from https://www.theyworkforyou.com/api/key - you'll have to sign up for an account
 - Export the API key to your environment: `export TWFY_KEY=...`
 - Clone the project and cd into the project directory
-- Download dependencies: `npm build`
+- Download dependencies: `npm i`
 
-Now you can just run the tests: `npm test`
+Now you can just run the tests: `npm run test`
 
 All done!

@@ -15,9 +15,8 @@ export default class GetMpService {
         });
     }
 
-    async getMP(mpId: string): Promise<MP> {
-        const response = await this.axios.get(`/getMP?id=${mpId}&key=${this.apiKey}&output=js`);
-        return response.data[0];
+    getMP(mpId: string): Promise<MP> {
+        return this.axios.get(`/getMP?id=${mpId}&key=${this.apiKey}&output=js`);
     }
 
     async getMPbyConstituency(constituency: string): Promise<MP> {

@@ -3,9 +3,9 @@ import { describe, it, before } from 'mocha';
 import chai, { expect } from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import chaiSubset from 'chai-subset';
-import GetMpService from '../../src/api/get_single_mp_service';
-import type { MP } from '../../src/objects/mp';
-import testMp from '../../test_data/mps/helen_hayes.json';
+import GetMpService from '../src/api/get_single_mp_service';
+import type { MP } from '../src/objects/mp';
+import testMp from '../data/mps/helen_hayes.json';
 
 
 chai.use(chaiAsPromised);
